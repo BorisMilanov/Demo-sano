@@ -2,10 +2,26 @@ body {
 	background: #00b4ff;
 	color: #333;
 	font: 100% Lato, Arial, Sans Serif;
-	height: 100vh;
+	/* height: 100vh; */
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
+}
+.separator-block{
+	display: flex;
+	flex-direction: column;
+	align-self:flex-start;
+}
+.box-separator1{
+	height: 100vh;
+	width: 100vw;
+}
+.box-separator2{
+display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  gap: 100px;
 }
 
 #background-wrap {
@@ -373,3 +389,4 @@ p {
     flex-direction: column;
   }
 }
+
