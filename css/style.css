@@ -357,7 +357,11 @@ p {
 #squiggleAlt {
 	visibility: hidden;
 }
+.img-product{
+	height: 1px;
+	width: 2px;
 
+}
 @media (width >= 48rem) {
 	#logo {
 		font-size: var(--f-xl);
