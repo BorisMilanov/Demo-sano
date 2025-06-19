@@ -193,6 +193,7 @@
   }
   .card img {
     display: none;
+    height: 100px;
   }
   .accents .acc-card {
     height: 180px !important;
