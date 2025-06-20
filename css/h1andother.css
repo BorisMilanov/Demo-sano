@@ -9,8 +9,7 @@
 	--angle: 45deg;
 	--background: linear-gradient(
 		var(--angle),
-		hsl(45 42.3% 72.2%),
-		hsl(44.2 67.9% 78%)
+		#00CED1
 	);
 	--color: #171716;
 	--hover-color: #1468e5;
