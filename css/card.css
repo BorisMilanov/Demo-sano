@@ -1,7 +1,12 @@
- .card { background: #fff; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); overflow: hidden; width: 260px; transition: transform 0.3s ease;
-height: 420px;
-} .card:hover { transform: translateY(-5px); } .card img { width: 100%; height: 150px; object-fit: cover; } .card-body { padding: 16px; } .card-title { font-size: 1.25rem; font-weight: bold; margin-bottom: 8px; } .card-description { font-size: 0.95rem; color: #555; margin-bottom: 12px; } .card-price { font-size: 1.1rem; color: #2c7a7b; margin-bottom: 12px; } .card-button { display: inline-block; background-color: #2c7a7b; color: #fff; padding: 10px 16px; text-decoration: none; border-radius: 6px;
-   transition: background 0.3s ease; } .card-button:hover { background-color: #225e5e; }
+ .card { background: #caa6a6; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); overflow: hidden; width: 260px; transition: transform 0.3s ease;
+height: 420px;} 
+.card:hover { transform: translateY(-5px); } 
+.card img { width: 100%; height: 150px; object-fit: cover; } 
+.card-body { padding: 16px; } .card-title { font-size: 1.25rem; font-weight: bold; margin-bottom: 8px; } 
+.card-description { font-size: 0.95rem; color: #555; margin-bottom: 12px; } .card-price { font-size: 1.1rem; color: #2c7a7b; margin-bottom: 12px; } 
+.card-button { display: inline-block; background-color: #2c7a7b; color: #fff; padding: 10px 16px; text-decoration: none; border-radius: 6px;
+   transition: background 0.3s ease; } 
+   .card-button:hover { background-color: #225e5e; }
    
 
    .accents {
@@ -135,10 +140,12 @@ height: 420px;
   }
   .card img {
     
-    height: 200px;
+    height: 220px;
     width: 100%;
+
     
   }
+  
   .accents .acc-card {
     height: 180px !important;
   }
