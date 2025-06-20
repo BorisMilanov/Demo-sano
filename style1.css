@@ -1,207 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
-
-* {
-	margin: 0;
-	padding: 0;
+ .card {
+  position: relative;
+  z-index: 2; /* on top of .accents */
+  width: 220px;
+  height: 500px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #292929aa 0%, #191919cc 50%);
+  backdrop-filter: blur(4px);
+  box-shadow:
+    inset 0 2px 2px 0 #e7c4a088,
+    inset 0 -2px 2px 0 #0003;
+  color: #ccc;
+  text-shadow: 1px 1px 3px #333a;
+  padding: 24px 42px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-:root {
-	--angle: 45deg;
-	--background: linear-gradient(
-		var(--angle),
-		hsl(45 42.3% 72.2%),
-		hsl(44.2 67.9% 78%)
-	);
-	--color: #171716;
-	--hover-color: #1468e5;
-	--white: #ffffff;
-	--font-primary: "Poppins", sans-serif;
-	--font-secondary: "Quicksand", sans-serif;
-	--f-sm: 0.8rem;
-	--f-md: 1rem;
-	--f-lg: 1.2rem;
-	--f-xl: 1.5rem;
-	--f-2xl: 2.5rem;
-	--f-3xl: 3rem;
-	--f-4xl: 4rem;
+.card h2, .card p {
+  margin: 8px 0;
+}
+.card h2 {
+  font-size: 1.1em;
+}
+.card p {
+  font-size: 0.9em;
+  font-weight: 800;
+  color: #aaa;
 }
 
-body {
-	padding: 0;
-	font-family: var(--font-primary);
-	color: var(--color);
-	background: var(--background);
-	min-height: 100vh;
+.card .button {
+  width: fit-content;
+  border-radius: 100px;
+  padding: 8px 36px;
+  margin-top: 12px;
+  background: #fff2;
+  box-shadow:
+    0 0 0 1px #fff3,
+    inset 120px 0 100px -100px #000c,
+    0 0 0 0 #fff1;
+  transition: box-shadow 0.4s ease-in-out;
+  cursor: pointer;
 }
+.card .button:hover {
+  box-shadow:
+    0 0 0 1px #fff3,
+    inset 200px 0px 100px -100px #000a,
+    -4px 0 8px 2px #fff2;
+} 
 
-.top-section {
-	padding: 1rem 1rem 8rem 1rem;
-	max-width: 48rem;
-}
+.card img {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+} 
 
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem;
-}
-
-nav {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-}
-
-header a {
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: var(--f-sm);
-	color: var(--color);
-	transition: all 0.2s ease-in-out;
-}
-
-header a:hover {
-	color: var(--hover-color);
-}
-
-#logo {
-	font-size: var(--f-lg);
-	font-weight: bold;
-}
-
-h1 {
-	font-family: var(--font-secondary);
-	font-size: var(--f-xl);
-	font-weight: 400;
-	display: flex;
-	flex-direction: column;
-}
-
-strong {
-	font-size: var(--f-3xl);
-	text-transform: uppercase;
-	margin: -0.7rem 0 1rem 0;
-}
-
-p {
-	font-size: var(--f-sm);
-	margin-bottom: 1rem;
-}
-
-#cta {
-	font: inherit;
-	font-size: var(--f-md);
-	padding: 0.5rem 1rem;
-	border: 1px solid var(--color);
-	background-color: transparent;
-	cursor: pointer;
-	border-radius: 35px;
-	transition: all 0.2s ease-in-out;
-}
-
-#cta:hover {
-	background-color: var(--color);
-	color: var(--white);
-}
-
-.divider-bottom {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	overflow: hidden;
-	line-height: 0;
-	transform: rotate(180deg);
-}
-
-.divider-bottom svg {
-	position: relative;
-	display: block;
-	width: calc(147% + 1.3px);
-	height: 200px;
-}
-
-#squiggleAlt {
-	visibility: hidden;
-}
-
-@media (width >= 48rem) {
-	#logo {
-		font-size: var(--f-xl);
-	}
-
-	header a {
-		font-size: var(--f-lg);
-	}
-
-	h1 {
-		font-size: var(--f-2xl);
-	}
-
-	strong {
-		font-size: var(--f-4xl);
-	}
-
-	p {
-		font-size: var(--f-md);
-	}
-
-	#cta {
-		font-size: var(--f-xl);
-	}
-}
-.container {
-  position: fixed;
-  width: 100%;
-  height: 200px;
-
-  /* overflow: hidden; */
-}
-
-
-.animated-text {
-  position: fixed;
-  top: 100px;
-  right:10px;
-  transform: translateY(-50%);
-  font-size: 1.5rem;
-  animation: moveTo45 2s ease-in-out forwards;
-}
-.animated-text1 {
-  position: fixed;
-  top: 100px;
-  left:973px;
-  transform: translateY(60%);
-  font-size: 1.5rem;
-  animation: moveTo451 2s ease-in-out backwards;
-}
-/* .animated-text1 {
-position: fixed;
-  top: 140px;
-  right: 120px;
-    transform: translateY(-24%);
-  text-align: justify;
-   width: 90%; 
-   height:  200px;
-  transform: translateY(-10%);
-  font-size: 0.9rem;
-  animation: moveTo451 2.4s ease-in-out backwards;
-}  */
-
-
-@keyframes moveTo45 {
-  0% {
-    right: 0;
-  }
-  100% {
-    right: 45%;
-  }
-}
-@keyframes moveTo451 {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 45%;
-  }
-}
