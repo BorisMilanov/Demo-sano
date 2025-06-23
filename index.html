@@ -41,7 +41,7 @@
     <div class="box-separator1">
       <section class="separator-home">
         <section class="top-section">
-          <h1>Welcome <strong>Squiggles</strong></h1>
+          <h1>Welcome <strong>Sano</strong></h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales
             arcu eu libero varius, sed.
@@ -57,6 +57,29 @@
     </div>
   </div>
 
+  <div id="slideshow-container" style="width:100%;  overflow:hidden;">
+    <img class="slide-img" src="slideHome/Forte_banner.png" style="width:100%;  display:block; object-fit:cover;">
+    <img class="slide-img" src="slideHome/banner_green_power.png" style="width:100%;  display:none; object-fit:cover;">
+    <img class="slide-img" src="slideHome/pure-sensation.png" style="width:100%;  display:none; object-fit:cover;">
+  </div>
+  
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName('slide-img');
+  
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = 'block';
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  
+    showSlides();
+  </script>
+  
 
   <!-- Footer -->
   <footer class="footer">
@@ -70,6 +93,8 @@
           Creating innovative cleaning solutions for a healthier, more sustainable world. 
           Our eco-friendly products make cleaning effortless and effective.
         </p>
+
+        
         <div class="social-links">
           <a href="#" class="social-link" aria-label="Facebook">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
