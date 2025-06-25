@@ -237,7 +237,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
+	height: 20%;
 	width: 100%;
 }
 .homebox{
@@ -749,11 +749,10 @@ p {
 		display: fixed;
 		width: 100%;
 		height: 100%;
-		z-index: 100;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
+		
+		padding-bottom: 1200px;
+	
+	
 	}
 	
 

@@ -334,13 +334,13 @@
 
 /* Landscape Mobile */
 @media (max-width: 768px) and (orientation: landscape) {
-  .footer {
-    padding: 1.5rem 0 0 0;
+  /* .footer {
+    
   }
-  
+   */
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+   
   }
   
   .footer-section {
