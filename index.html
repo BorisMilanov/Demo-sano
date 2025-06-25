@@ -16,15 +16,8 @@
 </head>
 
 <body>
-  <header>
-    <a href="#" id="logo"> Logo </a>
 
-    <nav>
-      <a href="index.html"> Home </a>
-      <a href="about.html"> About </a>
-      <a href="#"> Contact </a>
-    </nav>
-  </header>
+ 
   <div id="background-wrap">
     <div class="bubble x1"></div>
     <div class="bubble x2"></div>
@@ -38,10 +31,39 @@
     <div class="bubble x10"></div>
   </div>
   <div class="separator-block">
-    <div class="box-separator1">
+    <div class="mobile-container">
+
+      <!-- Vertical Sidebar Menu -->
+      <div class="sidebar" id="mySidebar">
+        <div class="sidebar-header">
+          <h3>Sano</h3>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="#home" class="sidebar-link active">Home</a>
+          <a href="#about" class="sidebar-link" onclick="window.location.href='about.html'">About</a>
+          <!-- <a href="#products" class="sidebar-link">Products</a>
+          <a href="#services" class="sidebar-link">Services</a>
+          <a href="#contact" class="sidebar-link">Contact</a>
+          <a href="#blog" class="sidebar-link">Blog</a> -->
+        </nav>
+      </div>
+
+      <!-- Menu Toggle Button -->
+      <div class="menu-toggle">
+        <button class="menu-btn" onclick="openNav()">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+      </div>
+
+      <!-- Overlay for closing menu -->
+      <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeNav()"></div>
+      
       <section class="separator-home">
         <section class="top-section">
-          <h1>Welcome <strong>Sano</strong></h1>
+          <h1 class="top-section-h1">Welcome <strong>Sano</strong></h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales
             arcu eu libero varius, sed.
@@ -53,16 +75,15 @@
           </button>
         </section>
       </section>
-   
-    </div>
+  
   </div>
 
-  <!-- <div id="slideshow-container" style="width:100%;  overflow:hidden;">
+  <div id="slideshow-container" style="width:100%;  overflow:hidden;">
     <img class="slide-img" src="slideHome/Forte_banner.png" style="width:100%;  display:block; object-fit:cover;">
     <img class="slide-img" src="slideHome/banner_green_power.png" style="width:100%;  display:none; object-fit:cover;">
     <img class="slide-img" src="slideHome/pure-sensation.png" style="width:100%;  display:none; object-fit:cover;">
   </div>
-   -->
+  
   <script>
     let slideIndex = 0;
     const slides = document.getElementsByClassName('slide-img');
@@ -78,8 +99,35 @@
     }
   
     showSlides();
+    
   </script>
-  
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("sidebarOverlay").style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("sidebarOverlay").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    // Close menu when clicking on a link
+    document.addEventListener('DOMContentLoaded', function() {
+      const sidebarLinks = document.querySelectorAll('.sidebar-link');
+      sidebarLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          closeNav();
+          // Remove active class from all links
+          sidebarLinks.forEach(l => l.classList.remove('active'));
+          // Add active class to clicked link
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
 
   <!-- Footer -->
   <footer class="footer">
