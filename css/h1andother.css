@@ -30,32 +30,36 @@ body {
 	background: var(--background);
 	min-height: 100vh;
 }
+.top-section-h1{
+	text-align: center;
+}
 
-.separator-home {
+/* .separator-home {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	/* center it vertically if needed */
-	height: 100vh;
-	/* full viewport height if desired */
-	padding-left: 2rem;
-}
+
+
 
 .top-section {
-	text-align: left;
+	padding: 1rem 1rem 8rem 1rem;
+	max-width: 48rem;
 }
 
-.top-section-h1 {
-	text-align: left;
+#cta{
+	position: absolute;
+	left: 30%;
+	right: 60%;
+	
 }
-
-.top-section-h1 strong {
-	text-align: left;
+/* .top-section-h1 strong {
+	text-align: center;
 }
 .top-section-h1 p{
 	text-align: left;
 	justify-content: center;
-}
+} */
 
 
 nav {
@@ -104,7 +108,9 @@ p {
 }
 
 #cta {
+	position: absolute;
 	font: inherit;
+	right: 40px;
 	font-size: var(--f-md);
 	padding: 0.5rem 1rem;
 	border: 1px solid var(--color);
@@ -113,7 +119,6 @@ p {
 	border-radius: 35px;
 	transition: all 0.2s ease-in-out;
 }
-
 #cta:hover {
 	background-color: var(--color);
 	color: var(--white);
